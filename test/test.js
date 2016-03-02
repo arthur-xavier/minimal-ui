@@ -1,8 +1,10 @@
-var minimal = require('../');
+var ui = require('../');
 require('chai').should();
 
 describe('minimal-ui', function() {
-  it('should exist', function() {
-    minimal.should.eql({});
+  it('should have navbar', function() {
+    ui.should.contain.keys('Navbar');
   });
 });
+
+require('../navbar/navbar.test');
